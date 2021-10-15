@@ -10,8 +10,20 @@ class TarefasController {
     }
     getTarefasById = async (req, res) => {
         const id = req.params.id;
+
+        //Conferir se ID é válido
+        if(!mongoose.Types.ObjectId.isValid(id)) {
+            res.status(403).send('Id inválido');
+            return
+        }
         const tarefa = await tarefasService.findById(id);
-        res.send(tarefa);
+
+        if(!tarefa) {
+            res.status(404).send('Tarefa não encontrada');
+            return
+        }
+
+        res.status(200).send(tarefa);
     }
 }
 
