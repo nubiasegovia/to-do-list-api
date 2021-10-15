@@ -25,6 +25,12 @@ class TarefasController {
 
         res.status(200).send(tarefa);
     }
+
+    createTarefa = async (req, res) => {
+        const tarefa = req.body;
+        const tarefaSalva = await tarefasService.createTarefa(tarefa);
+        res.send(`Tarefa ${tarefaSalva.titulo} criada com sucesso!`);
+    }
 }
 
 

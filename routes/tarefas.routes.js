@@ -12,6 +12,10 @@ router.get('/', tarefasController.getTarefas);
 //[GET] por id
 router.get('/:id', tarefasController.getTarefasById);
 
+//[POST] criação de tarefa
+router.post('/add', tarefasController.createTarefa);
+
+
 
 
 

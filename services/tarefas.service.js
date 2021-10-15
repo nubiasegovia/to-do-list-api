@@ -6,6 +6,9 @@ class TarefaService {
     findById = async (id) => {
         return await Tarefa.findById(id);
     }
+    createTarefa = async (tarefa) => {
+        return await Tarefa.create(tarefa);
+    }
 
 }
 
