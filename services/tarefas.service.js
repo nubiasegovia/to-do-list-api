@@ -2,9 +2,9 @@ const Tarefa = require('./../models/tarefa');
 
 // Retorna todas as tarefas
 class TarefaService {
-    findAll = async () => {
-        return await Tarefa.find();
-    }
+    findAll = async () => await Tarefa.find();
+    findById = async (id) => Tarefa.findById(id); 
+    
 }
 
 

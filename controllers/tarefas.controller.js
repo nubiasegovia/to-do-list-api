@@ -8,6 +8,11 @@ class TarefasController {
         const tarefas = await tarefasService.findAll();
         res.send(tarefas);
     }
+    getTarefasById = async (req, res) => {
+        const id = req.params.id;
+        const tarefa = await tarefasService.findById(id);
+        res.send(tarefa);
+    }
 }
 
 

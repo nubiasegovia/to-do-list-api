@@ -1,10 +1,14 @@
 const express = require('express');
+const TarefasController = require('./../controllers/tarefas.controller');
+
+
 //Inicializar rota
 const router = express.Router();
+const tarefasController = new TarefasController();
 
-router.get('/', (req, res) => {
-    res.send('Seja bem-vinde!');
-})
+//[GET] lista das tarefas
+router.get('/', tarefasController.getTarefas);
+
 
 
 
