@@ -15,7 +15,8 @@ router.get('/:id', tarefasController.getTarefasById);
 //[POST] criação de tarefa
 router.post('/add', tarefasController.createTarefa);
 
-
+//[PUT] atualização da tarefa
+router.put('/:id', tarefasController.editTarefa);
 
 
 

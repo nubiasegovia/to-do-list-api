@@ -31,6 +31,16 @@ class TarefasController {
         const tarefaSalva = await tarefasService.createTarefa(tarefa);
         res.send(`Tarefa ${tarefaSalva.titulo} criada com sucesso!`);
     }
+
+    editTarefa = async (req, res) => {
+        const id = req.params.id;
+        const tarefa = req.body;
+        await tarefasService.editTarefa(id, tarefa)
+        .then(() => {
+            res.status(200).send({message: 'Tarefa atualizada com sucesso'});
+        })
+        .catch((err) => res.status(500).send({error: `Erro no servidor: ${err}`}));
+    }
 }
 
 
