@@ -41,6 +41,12 @@ class TarefasController {
         })
         .catch((err) => res.status(500).send({error: `Erro no servidor: ${err}`}));
     }
+
+    deleteTarefa = async (req, res) => {
+        const id = req.params.id;
+        await tarefasService.deleteTarefa(id);
+        res.status(200).send({message: 'Tarefa excluída com sucesso.'});
+    }
 }
 
 

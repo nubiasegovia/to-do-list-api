@@ -18,6 +18,9 @@ router.post('/add', tarefasController.createTarefa);
 //[PUT] atualização da tarefa
 router.put('/:id', tarefasController.editTarefa);
 
+//[DELETE] por id
+router.delete('/:id', tarefasController.deleteTarefa);
+
 
 
 module.exports = router;

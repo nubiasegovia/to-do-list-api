@@ -12,7 +12,9 @@ class TarefaService {
     editTarefa = async (id, tarefa) => {
         return await Tarefa.updateOne({_id: id}, tarefa);
     }
-
+    deleteTarefa = async (id) => {
+        return await Tarefa.deleteOne({_id: id});
+    }
 }
 
 module.exports = TarefaService;
