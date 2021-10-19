@@ -14,7 +14,7 @@ app.use('/tarefas', TarefasRoutes); //indica para o express utilizar as rotas no
 
 
 
-const port = 3000;
+const port = 3001;
 
-app.listen(port, () => console.log(`App rodando em https://localhost:${port}/`));
+app.listen(port, () => console.log(`App rodando em http://localhost:${port}/`));
 
