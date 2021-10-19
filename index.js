@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 Conn();
 
-app.use('/tarefas', TarefasRoutes); //indica para o express utilizar as rotas no endpoin /vagas
+app.use('/tarefas', TarefasRoutes); //indica para o express utilizar as rotas no endpoin /tarefas
 
 
 
