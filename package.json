@@ -4,6 +4,7 @@
   "description": "API para gerenciar tarefas do dia a dia. Projeto para a avaliação final do módulo 3 da Blue EdTech",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "dev": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
