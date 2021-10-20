@@ -1,10 +1,11 @@
-require('dotenv').config();
+
 
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
 const TarefasRoutes = require('./routes/tarefas.routes');
+require('dotenv').config();
 const Conn = require('./conn/conn');
 
 const app = express();
@@ -22,7 +23,7 @@ app.use('/tarefas', TarefasRoutes); //indica para o express utilizar as rotas no
 
 
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => console.log(`App rodando em http://localhost:${port}/`));
 
